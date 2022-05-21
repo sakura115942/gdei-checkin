@@ -7,7 +7,7 @@ WORKDIR /src
 
 RUN apk update \
 	&& apk --no-cache add tzdata \
-	&& pip install requests -i https://pypi.tuna.tsinghua.edu.cn/simple \
+	&& pip install requests pycryptodome -i https://pypi.tuna.tsinghua.edu.cn/simple \
 	&& echo "1,15 6,7,11 * * * python /src/checkin.py" > /etc/crontabs/root
 
 CMD ["/usr/sbin/crond", "-l", "2", "-f"]
