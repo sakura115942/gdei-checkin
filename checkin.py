@@ -33,7 +33,7 @@ passwords = json.loads(os.environ['PASSWORDS'])
 
 def encrpt(password, public_key=None):
     if public_key is None:
-        public_key = 'MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCaGxxomLHQmUzALgHx3tV0L/zY0fabQJVPWJeW0O+KBsQdeP/HC015zV6C4ExiBxHkA8RtnSfMkKKBH3/6dyatFCrCxIw5KgtNqmC9dtsdUmDJq8IDW7hFkODAyzDAvuovvGn+wQvRl97iEqUVstnLi7SD9zCuM39AUM4ugtqsBwIDAQAB'
+        public_key = '-----BEGIN RSA PUBLIC KEY-----\n'+'MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCaGxxomLHQmUzALgHx3tV0L/zY0fabQJVPWJeW0O+KBsQdeP/HC015zV6C4ExiBxHkA8RtnSfMkKKBH3/6dyatFCrCxIw5KgtNqmC9dtsdUmDJq8IDW7hFkODAyzDAvuovvGn+wQvRl97iEqUVstnLi7SD9zCuM39AUM4ugtqsBwIDAQAB'+'\n-----END RSA PUBLIC KEY-----'
     rsakey = RSA.importKey(public_key)
     cipher = Cipher_pksc1_v1_5.new(rsakey)
     cipher_text = base64.b64encode(cipher.encrypt(password.encode()))
