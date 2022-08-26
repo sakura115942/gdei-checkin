@@ -10,7 +10,7 @@ FROM python:3.7-alpine
 ENV TZ="Asia/Shanghai"
 ENV LOCAL_PKG="/root/.local"
 COPY --from=build ${LOCAL_PKG} ${LOCAL_PKG}
-RUN echo "2,15 6,7,11 * * * python /src/checkin.py" > /etc/crontabs/root
+RUN echo "2,15 6,7,11 * * * python /app/checkin.py" > /etc/crontabs/root
 WORKDIR /app
 COPY . .
 ENTRYPOINT ["/usr/sbin/crond", "-l", "2", "-f"]
