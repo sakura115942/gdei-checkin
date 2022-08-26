@@ -5,11 +5,13 @@ gdei healthy checkin
 ``` bash
 docker build -t gdei-checkin .
 
-docker run -itd --restart=always --name=gdei-checkin --env ACCOUNTS='["YOUR ACCOUNT"]' --env PASSWORDS='["YOUR PASSWORD"]' gdei-checkin
+docker run -itd --restart=always --name=gdei-checkin gdei-checkin
 
 ```
 
 ``` bash
-docker logs CONTAINERID
+docker exec -it $(docker ps -q) /bin/sh
+
+docker logs $(docker ps -q)
 
 ```

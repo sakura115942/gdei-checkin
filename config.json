@@ -1,0 +1,26 @@
+{
+    "rsa_public_key": "-----BEGIN RSA PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCaGxxomLHQmUzALgHx3tV0L/zY0fabQJVPWJeW0O+KBsQdeP/HC015zV6C4ExiBxHkA8RtnSfMkKKBH3/6dyatFCrCxIw5KgtNqmC9dtsdUmDJq8IDW7hFkODAyzDAvuovvGn+wQvRl97iEqUVstnLi7SD9zCuM39AUM4ugtqsBwIDAQAB\n-----END RSA PUBLIC KEY-----",
+    "accounts": [
+        {
+            "username": "username",
+            "password": "passord",
+            "headers": {
+                "user-agent": "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.14 (KHTML, like Gecko) Chrome/24.0.1292.0 Safari/537.14"
+            }
+        },
+        {
+            "username": "username",
+            "password": "passord",
+            "headers": {
+                "user-agent": "Mozilla/5.0 (Windows; U; Windows NT 5.1; it-IT) AppleWebKit/533.20.25 (KHTML, like Gecko) Version/5.0.3 Safari/533.19.4"
+            }
+        },
+        {
+            "username": "username",
+            "password": "passord",
+            "headers": {
+                "user-agent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36"
+            }
+        }
+    ]
+}
