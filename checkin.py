@@ -5,7 +5,7 @@ import logging
 import requests
 requests.packages.urllib3.disable_warnings()
 
-from utils import Config, generate_ramdom_headers, rsa_encrpt
+from utils import Config, generate_ramdom_headers, rsa_encrpt, random_delay
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO,
@@ -76,6 +76,7 @@ def run():
 
         if student.login():
             student.check_in()
+        random_delay()
     
     if config.is_changed():
         config.save()

@@ -1,5 +1,7 @@
 import json
 import base64
+import time
+import random
 
 from fake_useragent import UserAgent
 from Crypto.PublicKey import RSA
@@ -44,3 +46,7 @@ def rsa_encrpt(password, public_key):
     cipher = Cipher_pksc1_v1_5.new(rsa_key)
     cipher_text = base64.b64encode(cipher.encrypt(password.encode()))
     return cipher_text.decode()
+
+
+def random_delay(a=10, b=20):
+    return time.sleep(random.randint(a, b))
