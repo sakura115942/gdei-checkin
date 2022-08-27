@@ -1,25 +1,31 @@
 # gdei-checkin
 gdei healthy checkin
 
-## 如何运行
+## 使用方法
 ``` bash
+git clone git@github.com:sakura115942/gdei-checkin.git
+
+cd gdei-checkin
+
+# 构建镜像
 docker build -t gdei-checkin .
 
+# 启动容器
 docker run -itd --restart=always --name=gdei-checkin gdei-checkin
 
 ```
 
-## 查看日志
+## 其他命令
 ``` bash
-docker exec -it gdei-checkin /bin/sh
+# 进入容器
+docker exec -it gdei-checkin /bin/sh  
 
-docker logs gdei-checkin | grep 'INFO\|ERROR'
+# 输出日志
+docker logs gdei-checkin | grep 'INFO\|ERROR'  
 
-```
-
-## 如何删除
-``` bash
+# 删除容器
 docker rm -f gdei-checkin
 
+# 删除镜像
 docker rmi gdei-checkin
 ```
