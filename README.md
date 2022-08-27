@@ -10,8 +10,8 @@ docker run -itd --restart=always --name=gdei-checkin gdei-checkin
 ```
 
 ``` bash
-docker exec -it $(docker ps -q) /bin/sh
+docker exec -it gdei-checkin /bin/sh
 
-docker logs $(docker ps -q)
+docker logs gdei-checkin | grep 'INFO\|ERROR'
 
 ```
